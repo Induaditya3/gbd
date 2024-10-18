@@ -8,7 +8,7 @@ bool IsEven(int input){
 
 int main(){
     
-    unsigned int counter= 0;
+    unsigned int counter= 42;
     for(int i=0; i < 1000; i++){
         if(IsEven(i)){
             counter++;
