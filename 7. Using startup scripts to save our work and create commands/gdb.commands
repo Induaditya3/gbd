@@ -1,0 +1,14 @@
+define reg_cmd
+    if $argc < 1
+        print "needs exactly 1 argument"
+    end
+    if $argc == 1
+        print "Setting up regular expression"
+        print "arg0 is %s", $arg0
+        eval "rbreak %s", $arg0
+    end
+end
+
+document reg_cmd
+    some helpful information about our command
+end

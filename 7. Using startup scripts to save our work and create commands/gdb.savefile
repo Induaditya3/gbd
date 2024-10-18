@@ -1,0 +1,3 @@
+print "hi"
+b main
+b SetInputCallBack 

@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+
+// Fixed-data encoding a secret message
+static char data[]= {0x59,0x6F,0x75,0x20,0x68,0x61,0x76,0x65,
+                     0x20,0x63,0x6F,0x6D,0x70,0x6C,0x65,0x74,
+                     0x65,0x64,0x20,0x74,0x68,0x65,0x20,0x63,
+                     0x6F,0x75,0x72,0x73,0x65,0x20,0x2D,0x2D,
+                     0x20,0x63,0x6F,0x6E,0x67,0x72,0x61,0x74,
+                     0x75,0x6C,0x61,0x74,0x69,0x6F,0x6E,0x73,
+                     0x21,0x0};
+
+// Greeting routine
+void greeting(){
+    printf("Hello everyone!\n");
+    sleep(2);
+    
+    printf("I have an important message for you\n");
+    sleep(2);
+    
+    printf("*Hint* it's about debugging\n");
+    sleep(2);
+}
+
+// Entry point to program
+int main(){
+
+    // Greeting message
+    greeting();
+
+    // Setup special message    
+    char* p=malloc(sizeof(data));
+    strcpy(p,data);
+    printf("%s\n",p);
+
+    free(p);
+
+    return 0;
+}
