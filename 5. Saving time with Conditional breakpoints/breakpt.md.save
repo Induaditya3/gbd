@@ -1,0 +1,7 @@
+# Setting breakpoints
+
+  - `break <line_no> ` to set breakpoints at particular locations
+  - `watch <variable>` to see value of variable when it is modified
+  - `rwatch <variable>` to see value of variable when it is read
+  - `b if <variable> > <value>`  This allows us to 'break' if some variable (in scope) is greater than value.
+  - `rbreak ^gl` this uses regex to set breakpoints  In this case, this sets breakpoints on anything that starts with 'gl'. This can be very useful if we have a family of functions that all start with 'gl' (especially common in C-based libraries).
